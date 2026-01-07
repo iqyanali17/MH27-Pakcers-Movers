@@ -112,6 +112,9 @@ export default function Header({ currentPage, openModal }) {
     if (pathname === '/services') return 'services';
     if (pathname === '/about') return 'about';
     if (pathname === '/contact') return 'contact';
+    if (pathname === '/privacy') return 'privacy';
+    if (pathname === '/terms') return 'terms';
+    if (pathname === '/refund') return 'refund';
     return 'home';
   };
 
@@ -152,12 +155,6 @@ export default function Header({ currentPage, openModal }) {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    padding: { 
-                      xs: '8px 12px', 
-                      sm: '8px 16px', 
-                      md: '10px 20px', 
-                      lg: '12px 24px' 
-                    },
                     cursor: 'pointer',
                     '&:hover': {
                       transform: 'translateY(-2px)',
@@ -166,57 +163,16 @@ export default function Header({ currentPage, openModal }) {
                   }}
                 >
                   <Box
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Typography
+                    component="img"
+                    src="/images/image.png"
+                    alt="MH27 Packers & Movers Logo"
                     sx={{
-                      color: 'white',
-                      fontWeight: 'bold',
-                      fontSize: { 
-                        xs: '20px', 
-                        sm: '24px', 
-                        md: '28px', 
-                        lg: '32px', 
-                        xl: '38px' 
-                      },
-                      textAlign: 'center',
-                      lineHeight: 1,
+                      height: '100%',
+                      width: '100%',
+                      objectFit: 'contain',
                     }}
-                  >
-                    MH 27
-                  </Typography>
-                  <Typography
-                    sx={{
-                      color: '#94a3b8',
-                      fontSize: { 
-                        xs: '10px', 
-                        sm: '12px', 
-                        md: '14px', 
-                        lg: '16px', 
-                        xl: '18px' 
-                      },
-                      textAlign: 'center',
-                      lineHeight: 1,
-                      mt: 0.5,
-                      display: { xs: 'none', sm: 'block' }
-                    }}
-                  >
-                    Packers & Movers
-                  </Typography>
+                  />
                 </Box>
-                </Box>
-                <LocalShipping 
-                  sx={{ 
-                    fontSize: { xs: 32, sm: 40 }, 
-                    color: 'white',
-                    display: 'none',
-                  }} 
-                />
               </LogoContainer>
             </Link>
 
@@ -228,14 +184,14 @@ export default function Header({ currentPage, openModal }) {
                     Home
                   </NavButton>
                 </Link>
-                <Link href="/services" style={{ textDecoration: 'none' }}>
-                  <NavButton active={activePage === "services"}>
-                    Services
-                  </NavButton>
-                </Link>
                 <Link href="/about" style={{ textDecoration: 'none' }}>
                   <NavButton active={activePage === "about"}>
                     About Us
+                  </NavButton>
+                </Link>
+                <Link href="/services" style={{ textDecoration: 'none' }}>
+                  <NavButton active={activePage === "services"}>
+                    Services
                   </NavButton>
                 </Link>
                 <Link href="/contact" style={{ textDecoration: 'none' }}>
@@ -303,25 +259,6 @@ export default function Header({ currentPage, openModal }) {
           </Link>
         </MenuItem>
         <MenuItem sx={{ color: 'white', py: 1 }}>
-          <Link href="/services" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
-            <Box sx={{ 
-              color: 'white',
-              backgroundColor: activePage === "services" ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
-              '&:hover': {
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-              },
-              fontWeight: activePage === "services" ? 600 : 400,
-              py: 1,
-              px: 2,
-              borderRadius: 1,
-              width: '100%',
-              fontSize: { xs: '14px', sm: '16px' }
-            }}>
-              Services
-            </Box>
-          </Link>
-        </MenuItem>
-        <MenuItem sx={{ color: 'white', py: 1 }}>
           <Link href="/about" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
             <Box sx={{ 
               color: 'white',
@@ -341,6 +278,25 @@ export default function Header({ currentPage, openModal }) {
           </Link>
         </MenuItem>
         <MenuItem sx={{ color: 'white', py: 1 }}>
+          <Link href="/services" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+            <Box sx={{ 
+              color: 'white',
+              backgroundColor: activePage === "services" ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+              fontWeight: activePage === "services" ? 600 : 400,
+              py: 1,
+              px: 2,
+              borderRadius: 1,
+              width: '100%',
+              fontSize: { xs: '14px', sm: '16px' }
+            }}>
+              Services
+            </Box>
+          </Link>
+        </MenuItem>
+        <MenuItem sx={{ color: 'white', py: 1 }}>
           <Link href="/contact" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
             <Box sx={{ 
               color: 'white',
@@ -356,6 +312,63 @@ export default function Header({ currentPage, openModal }) {
               fontSize: { xs: '14px', sm: '16px' }
             }}>
               Contact
+            </Box>
+          </Link>
+        </MenuItem>
+        <MenuItem sx={{ color: 'white', py: 1 }}>
+          <Link href="/privacy" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+            <Box sx={{ 
+              color: 'white',
+              backgroundColor: activePage === "privacy" ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+              fontWeight: activePage === "privacy" ? 600 : 400,
+              py: 1,
+              px: 2,
+              borderRadius: 1,
+              width: '100%',
+              fontSize: { xs: '14px', sm: '16px' }
+            }}>
+              Privacy
+            </Box>
+          </Link>
+        </MenuItem>
+        <MenuItem sx={{ color: 'white', py: 1 }}>
+          <Link href="/terms" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+            <Box sx={{ 
+              color: 'white',
+              backgroundColor: activePage === "terms" ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+              fontWeight: activePage === "terms" ? 600 : 400,
+              py: 1,
+              px: 2,
+              borderRadius: 1,
+              width: '100%',
+              fontSize: { xs: '14px', sm: '16px' }
+            }}>
+              Terms
+            </Box>
+          </Link>
+        </MenuItem>
+        <MenuItem sx={{ color: 'white', py: 1 }}>
+          <Link href="/refund" style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+            <Box sx={{ 
+              color: 'white',
+              backgroundColor: activePage === "refund" ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+              fontWeight: activePage === "refund" ? 600 : 400,
+              py: 1,
+              px: 2,
+              borderRadius: 1,
+              width: '100%',
+              fontSize: { xs: '14px', sm: '16px' }
+            }}>
+              Refund Policy
             </Box>
           </Link>
         </MenuItem>

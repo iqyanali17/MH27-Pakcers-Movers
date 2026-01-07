@@ -8,8 +8,8 @@ export default function WhoWeAre() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Who We Are</h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            We are a team of dedicated professionals committed to making your moving experience seamless and stress-free. 
-            With years of experience in the industry, we understand the challenges of relocation and are here to provide 
+            We are a team of dedicated professionals committed to making your moving experience seamless and stress-free. since 2020
+            with 5 years of experience in the industry, we understand the challenges of relocation and are here to provide 
             reliable, efficient, and affordable moving solutions tailored to your specific needs.
           </p>
         </div>

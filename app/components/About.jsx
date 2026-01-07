@@ -25,25 +25,25 @@ export default function About() {
           <div className="mt-10">
             <h3 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Why Choose MH27 Packers & Movers?</h3>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3">✓</span>
-                <span className="text-gray-700"><strong>Expert Team:</strong> Our dedicated team of trained professionals ensures that your belongings are handled with care.</span>
+              <li className="flex items-start group bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-blue-600 cursor-pointer">
+                <span className="text-blue-600 mr-3 text-xl group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300"><strong className="group-hover:text-blue-800 transition-colors duration-300">Expert Team:</strong> Our dedicated team of trained professionals ensures that your belongings are handled with care.</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3">✓</span>
-                <span className="text-gray-700"><strong>Comprehensive Services:</strong> We offer a wide range of services tailored to meet your moving needs.</span>
+              <li className="flex items-start group bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-blue-600 cursor-pointer">
+                <span className="text-blue-600 mr-3 text-xl group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300"><strong className="group-hover:text-blue-800 transition-colors duration-300">Comprehensive Services:</strong> We offer a wide range of services tailored to meet your moving needs.</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3">✓</span>
-                <span className="text-gray-700"><strong>Reliable & Timely Delivery:</strong> Your belongings will arrive at your new destination safely and on time.</span>
+              <li className="flex items-start group bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-blue-600 cursor-pointer">
+                <span className="text-blue-600 mr-3 text-xl group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300"><strong className="group-hover:text-blue-800 transition-colors duration-300">Reliable & Timely Delivery:</strong> Your belongings will arrive at your new destination safely and on time.</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3">✓</span>
-                <span className="text-gray-700"><strong>Affordable Pricing:</strong> Get a free quote today!</span>
+              <li className="flex items-start group bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-blue-600 cursor-pointer">
+                <span className="text-blue-600 mr-3 text-xl group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300"><strong className="group-hover:text-blue-800 transition-colors duration-300">Affordable Pricing:</strong> Get a free quote today!</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 mr-3">✓</span>
-                <span className="text-gray-700"><strong>Customer Satisfaction:</strong> Your satisfaction is our top priority.</span>
+              <li className="flex items-start group bg-white p-4 rounded-lg shadow-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-blue-600 cursor-pointer">
+                <span className="text-blue-600 mr-3 text-xl group-hover:scale-125 transition-transform duration-300">✓</span>
+                <span className="text-gray-700 group-hover:text-blue-600 transition-colors duration-300"><strong className="group-hover:text-blue-800 transition-colors duration-300">Customer Satisfaction:</strong> Your satisfaction is our top priority.</span>
               </li>
             </ul>
           </div>
