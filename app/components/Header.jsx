@@ -28,8 +28,8 @@ import {
 import { styled } from '@mui/material/styles';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)',
-  boxShadow: '0 2px 20px rgba(15, 23, 42, 0.3)',
+  background: 'linear-gradient(135deg, #0f172a 0%, #042866ff 50%, #052451ff 100%)',
+  boxShadow: '0 2px 20px rgba(2, 30, 94, 0.3)',
   backdropFilter: 'blur(12px)',
   borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
   transition: 'all 0.3s ease',
@@ -52,13 +52,13 @@ const NavButton = styled(Button, {
   fontWeight: active ? 600 : 500,
   position: 'relative',
   padding: '8px 16px',
-  borderRadius: '8px',
-  transition: 'all 0.3s ease',
-  backgroundColor: active ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
-  border: active ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid transparent',
+  borderRadius: '0px',
+  transition: 'all 0.2s ease',
+  backgroundColor: 'transparent',
+  border: 'none',
+  boxShadow: 'none',
   '&:hover': {
-    backgroundColor: active ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)',
-    transform: 'translateY(-2px)',
+    backgroundColor: 'transparent',
   },
   '&::after': {
     content: '""',
@@ -69,10 +69,19 @@ const NavButton = styled(Button, {
     width: active ? '80%' : '0',
     height: '2px',
     backgroundColor: '#fff',
-    transition: 'width 0.3s ease',
+    transition: 'width 0.2s ease',
   },
   '&:hover::after': {
     width: '80%',
+  },
+  '& .MuiTouchRipple-root': {
+    display: 'none',
+  },
+  '&:active': {
+    backgroundColor: 'transparent',
+  },
+  '&:focus': {
+    backgroundColor: 'transparent',
   },
 }));
 
@@ -139,37 +148,33 @@ export default function Header({ currentPage, openModal }) {
                 <Box
                   sx={{
                     height: { 
-                      xs: '50px', 
-                      sm: '55px', 
-                      md: '60px', 
-                      lg: '70px', 
-                      xl: '80px' 
+                      xs: '35px', 
+                      sm: '40px', 
+                      md: '45px', 
+                      lg: '50px', 
+                      xl: '55px' 
                     },
                     width: { 
-                      xs: '160px', 
-                      sm: '180px', 
-                      md: '200px', 
-                      lg: '240px', 
-                      xl: '300px' 
+                      xs: '120px', 
+                      sm: '140px', 
+                      md: '160px', 
+                      lg: '180px', 
+                      xl: '200px' 
                     },
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     cursor: 'pointer',
-                    '&:hover': {
-                      transform: 'translateY(-2px)',
-                      transition: 'transform 0.3s ease',
-                    },
                   }}
                 >
                   <Box
                     component="img"
-                    src="/images/image.png"
+                    src="/images/mh27-new-png.png"
                     alt="MH27 Packers & Movers Logo"
                     sx={{
                       height: '100%',
                       width: '100%',
-                      objectFit: 'contain',
+                      objectFit: 'contain'
                     }}
                   />
                 </Box>

@@ -5,42 +5,36 @@ export default function Services({ openModal }) {
   const services = [
     {
       id: 'residential-moving',
-      icon: <Home className="w-8 h-8 text-white" />,
       title: "Residential Moving",
       description: "Professional moving services for your home and apartment.",
       image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop"
     },
     {
       id: 'commercial-moving',
-      icon: <Building2 className="w-8 h-8 text-white" />,
       title: "Commercial Moving",
       description: "Efficient office and business relocation services.",
-      image: "https://picsum.photos/800/600?random=2"
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
     },
     {
       id: 'packing-services',
-      icon: <Package className="w-8 h-8 text-white" />,
       title: "Packing Services",
       description: "Professional packing and unpacking services.",
-      image: "https://picsum.photos/800/600?random=3"
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop"
     },
     {
       id: 'storage-solutions',
-      icon: <Box className="w-8 h-8 text-white" />,
       title: "Storage Solutions",
       description: "Secure storage facilities for your belongings.",
-      image: "https://picsum.photos/800/600?random=4"
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop"
     },
     {
       id: 'long-distance',
-      icon: <Truck className="w-8 h-8 text-white" />,
       title: "Long Distance Moving",
       description: "Reliable long-distance moving across states.",
       image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&h=600&fit=crop"
     },
     {
       id: 'specialty-items',
-      icon: <ShieldCheck className="w-8 h-8 text-white" />,
       title: "Specialty Items",
       description: "Expert handling of valuable and fragile items.",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
@@ -76,17 +70,9 @@ export default function Services({ openModal }) {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     priority={index < 3}
                     unoptimized={true}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.style.display = 'none';
-                      e.target.parentNode.parentNode.style.background = 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)';
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4">
-                    <div className="bg-blue-600 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center -mb-6 sm:-mb-8 ml-3 sm:ml-4 border-4 border-white shadow-lg">
-                      {service.icon}
-                    </div>
                   </div>
                 </div>
               </div>

@@ -338,70 +338,6 @@ export default function Contact() {
           {/* Enhanced Contact Information */}
           <div className="space-y-8">
             {/* Main Contact Info */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">MH27 Packers & Movers</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 text-lg mb-1">Registered Office</h3>
-                    <p className="text-gray-600">
-                      MH 27 Packers & Movers<br />
-                      Near Railway Station, Amravati<br />
-                      Maharashtra, India - 444601<br />
-                      <span className="text-sm text-blue-600">Branches available in major cities</span>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 text-lg mb-1">Contact Numbers</h3>
-                    <p className="text-gray-600">
-                      Main: +91 98765 43210<br />
-                      WhatsApp: +91 98765 43210<br />
-                      Toll-Free: 1800-123-4567<br />
-                      <span className="text-sm text-green-600">24/7 Emergency Support</span>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 text-lg mb-1">Email Addresses</h3>
-                    <p className="text-gray-600">
-                      General: info@mh27packers.com<br />
-                      Quotes: quotes@mh27packers.com<br />
-                      Support: support@mh27packers.com<br />
-                      <span className="text-sm text-blue-600">Quick response guaranteed</span>
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 text-lg mb-1">Working Hours</h3>
-                    <p className="text-gray-600">
-                      Monday - Saturday: 8:00 AM - 8:00 PM<br />
-                      Sunday: 9:00 AM - 6:00 PM<br />
-                      <span className="text-sm text-orange-600 font-semibold">Emergency Moving: 24/7 Available</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Social Media */}
             <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -463,43 +399,128 @@ export default function Contact() {
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16 bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="mt-16 bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Find answers to common questions about our moving services</p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">How much time should I book before moving?</h3>
-                <p className="text-gray-600">We recommend booking at least 7-10 days in advance for local moves and 15-20 days for intercity relocations to get the best rates and availability.</p>
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-blue-100 rounded-lg p-2 mr-4 group-hover:bg-blue-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">How much time should I book before moving?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">We recommend booking at least 7-10 days in advance for local moves and 15-20 days for intercity relocations to get the best rates and availability.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">What packing materials do you provide?</h3>
-                <p className="text-gray-600">We provide high-quality packing materials including cardboard boxes, bubble wrap, packing paper, tape, waterproof covers, and custom crates for fragile items.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-green-100 rounded-lg p-2 mr-4 group-hover:bg-green-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">What packing materials do you provide?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">We provide high-quality packing materials including cardboard boxes, bubble wrap, packing paper, tape, waterproof covers, and custom crates for fragile items.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Is my goods insured during transit?</h3>
-                <p className="text-gray-600">Yes, we offer comprehensive transit insurance coverage for all your belongings. We also provide all-risk insurance for high-value items at additional cost.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-purple-100 rounded-lg p-2 mr-4 group-hover:bg-purple-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">Is my goods insured during transit?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Yes, we offer comprehensive transit insurance coverage for all your belongings. We also provide all-risk insurance for high-value items at additional cost.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Do you provide vehicle transportation?</h3>
-                <p className="text-gray-600">Yes, we specialize in car and bike transportation using specialized carriers and containers to ensure safe delivery across India.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-orange-100 rounded-lg p-2 mr-4 group-hover:bg-orange-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">Do you provide vehicle transportation?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Yes, we specialize in car and bike transportation using specialized carriers and containers to ensure safe delivery across India.</p>
+                  </div>
+                </div>
               </div>
             </div>
+            
             <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">How are moving charges calculated?</h3>
-                <p className="text-gray-600">Charges depend on distance, volume/weight of goods, packing requirements, floor of building, vehicle type, and additional services like insurance or storage.</p>
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-red-100 rounded-lg p-2 mr-4 group-hover:bg-red-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">How are moving charges calculated?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Charges depend on distance, volume/weight of goods, packing requirements, floor of building, vehicle type, and additional services like insurance or storage.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Do you have storage facilities?</h3>
-                <p className="text-gray-600">Yes, we provide secure, climate-controlled storage facilities for short-term and long-term storage needs with 24/7 surveillance.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-indigo-100 rounded-lg p-2 mr-4 group-hover:bg-indigo-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">Do you have storage facilities?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">Yes, we provide secure, climate-controlled storage facilities for short-term and long-term storage needs with 24/7 surveillance.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">Which cities do you serve?</h3>
-                <p className="text-gray-600">We provide services across all major cities in India including Mumbai, Delhi, Bangalore, Chennai, Kolkata, Pune, Hyderabad, and many more.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-teal-100 rounded-lg p-2 mr-4 group-hover:bg-teal-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">Which cities do you serve?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">We provide services across all major cities in India including Mumbai, Delhi, Bangalore, Chennai, Kolkata, Pune, Hyderabad, and many more.</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-gray-800 mb-2">What if my items get damaged during moving?</h3>
-                <p className="text-gray-600">In the rare case of damage, our insurance covers the cost. We have a claims process where you can report damages within 24 hours of delivery.</p>
+              
+              <div className="group bg-white p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                <div className="flex items-start">
+                  <div className="bg-pink-100 rounded-lg p-2 mr-4 group-hover:bg-pink-200 transition-colors duration-300">
+                    <svg className="w-5 h-5 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">What if my items get damaged during moving?</h3>
+                    <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">In the rare case of damage, our insurance covers the cost. We have a claims process where you can report damages within 24 hours of delivery.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

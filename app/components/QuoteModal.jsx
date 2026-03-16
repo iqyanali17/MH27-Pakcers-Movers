@@ -99,10 +99,10 @@ Notes: ${formData.message}
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center p-4 overflow-y-auto py-10">
-      <div className="bg-white rounded-lg p-6 w-full max-w-2xl">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Request a Free Moving Quote</h2>
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg p-4 w-full max-w-xl max-h-[90vh] pb-6">
+        <div className="flex justify-between items-center mb-1">
+          <h2 className="text-2xl font-bold text-gray-800">Request a Quote</h2>
           <button 
             onClick={close} 
             className="text-gray-500 hover:text-gray-700 text-2xl"
@@ -118,7 +118,7 @@ Notes: ${formData.message}
           </div>
         )}
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-2 pb-2">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Personal Information */}
             <div className="space-y-4">
@@ -200,6 +200,7 @@ Notes: ${formData.message}
                   <option value="local">Local Move</option>
                   <option value="long-distance">Long Distance Move</option>
                   <option value="international">International Move</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
@@ -236,49 +237,6 @@ Notes: ${formData.message}
                 className="w-full p-1.5 sm:p-2 border border-gray-300 rounded focus:ring-1 sm:focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xs sm:text-sm"
                 required
               />
-              </div>
-              
-              <div className="grid grid-cols-2 gap-2 sm:gap-4">
-                <div>
-                  <label className="block text-gray-700 text-xs sm:text-sm font-medium mb-1" htmlFor="propertySize">
-                    Property Size (sq ft)
-                  </label>
-                  <select
-                    id="propertySize"
-                    name="propertySize"
-                    value={formData.propertySize}
-                    onChange={handleChange}
-                    className="w-full p-1.5 sm:p-2 border border-gray-300 rounded focus:ring-1 sm:focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xs sm:text-sm"
-                  >
-                    <option value="">Select Size</option>
-                    <option value="under-1000">Under 1,000 sq ft</option>
-                    <option value="1000-1500">1,000 - 1,500 sq ft</option>
-                    <option value="1500-2000">1,500 - 2,000 sq ft</option>
-                    <option value="2000-2500">2,000 - 2,500 sq ft</option>
-                    <option value="over-2500">Over 2,500 sq ft</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-gray-700 text-xs sm:text-sm font-medium mb-1" htmlFor="bedrooms">
-                    Number of Bedrooms
-                  </label>
-                  <select
-                    id="bedrooms"
-                    name="bedrooms"
-                    value={formData.bedrooms}
-                    onChange={handleChange}
-                    className="w-full p-1.5 sm:p-2 border border-gray-300 rounded focus:ring-1 sm:focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xs sm:text-sm"
-                  >
-                    <option value="">Select</option>
-                    <option value="studio">Studio</option>
-                    <option value="1">1 Bedroom</option>
-                    <option value="2">2 Bedrooms</option>
-                    <option value="3">3 Bedrooms</option>
-                    <option value="4">4 Bedrooms</option>
-                    <option value="5+">5+ Bedrooms</option>
-                  </select>
-                </div>
               </div>
               
               <div>
@@ -347,12 +305,15 @@ Notes: ${formData.message}
               rows={3}
               placeholder="Any special instructions, fragile items, or additional information we should know about..."
               className="w-full p-1.5 sm:p-2 border border-gray-300 rounded focus:ring-1 sm:focus:ring-2 focus:ring-blue-500 focus:border-transparent text-xs sm:text-sm"
-            />
+            /> 
+             <p className="text-xs text-gray-500 mt-2">
+            By submitting this form, you agree to our <a href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</a> and 
+            <a href="/terms" className="text-blue-600 hover:underline ml-1">Terms of Service</a>.
+          </p>
           </div>
           
-          <div className="flex items-center justify-between pt-2 sm:pt-4">
+          <div className="flex items-center justify-end gap-4">
             <button
-              type="button"
               onClick={close}
               className="px-3 sm:px-4 py-1.5 sm:py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-1 sm:focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 text-xs sm:text-sm"
             >
@@ -361,16 +322,12 @@ Notes: ${formData.message}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-4 sm:px-6 py-1.5 sm:py-2 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-1 sm:focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
+              className="px-3 sm:px-4 py-1 sm:py-1.5 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-1 sm:focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm"
             >
-              {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
           </div>
           
-          <p className="text-xs text-gray-500 mt-2">
-            By submitting this form, you agree to our <a href="/privacy" className="text-blue-600 hover:underline">Privacy Policy</a> and 
-            <a href="/terms" className="text-blue-600 hover:underline ml-1">Terms of Service</a>.
-          </p>
         </form>
       </div>
     </div>
